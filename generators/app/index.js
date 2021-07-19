@@ -35,9 +35,9 @@ module.exports = class extends Generator {
             'src/main.js',
             'static/.gitkeep',
             'index.html',
+            'package-lock.json',
             'package.json',
-            "README.md",
-            'yarn.lock'
+            "README.md"
         ]
         templates.forEach(item=>{ 
             this.fs.copyTpl(
@@ -46,13 +46,5 @@ module.exports = class extends Generator {
                 this.answers = this.answers
             )
         })
-        
-
-        // const tmpl = this.templatePath('index.html')
-        // // 输出目标路径
-        // const output = this.destinationPath('index.html')
-        // //模版数据上下文
-        // const context = this.answers
-        // this.fs.copyTpl(tmpl,output,context)
     }
 }
